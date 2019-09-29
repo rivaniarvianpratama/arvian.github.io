@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<title>Praktikum MulOn - Canvas HTML</title>
+	<style type="text/css">
+		canvas {
+			background-color: #ABC7D5;
+			position: absolute;
+	        top: -5;
+	        left: 14%;
+	        margin: 40px;
+    		padding: 50px;
+	        z-index: 0;
+		}
+	</style>
+</head>
+<body>
+
+<canvas width="800" height="450" id="canvas"></canvas>
+
+<script type="text/javascript">
+	var c = document.getElementById('canvas');
+	var ctx =c.getContext('2d');
+
+	//lingkaran_besar
+		ctx.beginPath();
+	    ctx.arc(400, 225, 150, 0, Math.PI * 2);
+	    ctx.fillStyle = "#800000"
+
+	    ctx.lineWidth=3;
+		ctx.strokeStyle="white";
+	    ctx.fill();
+	    ctx.stroke();
+
+	//lingkaran_kecil
+		ctx.beginPath();
+	    ctx.arc(400, 225, 100, 0, Math.PI * 2);
+	    ctx.fillStyle = "#FFA500";
+	    ctx.fill();
+
+	//kotak
+		ctx.beginPath();
+		 ctx.rect(350, 175, 100, 100);
+		 ctx.fillStyle = "#469FB4";
+		 ctx.lineWidth=6;
+		 ctx.strokeStyle="white";
+		 ctx.strokeRect(350, 175, 100, 100);
+		 ctx.fill();
+	 
+
+	//segitiga_kanan
+		ctx.beginPath();
+	    ctx.moveTo(670, 135);
+	    ctx.lineTo(790, 220);
+	    ctx.lineTo(670, 325);
+	    ctx.fillStyle = "#5A8E23";
+	    ctx.fill();
+
+
+	//segitiga_kiri
+		ctx.beginPath();
+	    ctx.moveTo(130, 135);
+	    ctx.lineTo(10, 220);
+	    ctx.lineTo(130, 325);
+	    ctx.fillStyle = "#5A8E23";
+	    ctx.fill();
+	 
+</script>
+</body>
+</html>
