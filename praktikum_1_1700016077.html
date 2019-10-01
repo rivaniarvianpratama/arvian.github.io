@@ -15,9 +15,7 @@
 	</style>
 </head>
 <body>
-
 <canvas width="800" height="450" id="canvas"></canvas>
-
 <script type="text/javascript">
 	var c = document.getElementById('canvas');
 	var ctx =c.getContext('2d');
@@ -40,12 +38,20 @@
 
 	//kotak
 		ctx.beginPath();
-		 ctx.rect(350, 175, 100, 100);
-		 ctx.fillStyle = "#469FB4";
-		 ctx.lineWidth=6;
-		 ctx.strokeStyle="white";
-		 ctx.strokeRect(350, 175, 100, 100);
-		 ctx.fill();
+		ctx.rect(350, 175, 100, 100);
+		ctx.fillStyle = "#469FB4";
+		ctx.lineWidth=6;
+		ctx.strokeStyle="white";
+		ctx.strokeRect(350, 175, 100, 100);
+		ctx.fill();
+
+	//segitiga_play
+		ctx.beginPath();
+	    ctx.moveTo(75, 50);
+	    ctx.lineTo(100, 75);
+	    ctx.lineTo(100, 25);
+	    ctx.fillStyle = "white";
+	    ctx.fill();
 	 
 
 	//segitiga_kanan
