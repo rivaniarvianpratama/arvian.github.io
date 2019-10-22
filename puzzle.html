@@ -19,14 +19,14 @@ function startGame() {
    myApp.start();
    for(var i=1; i<4; i++)
    {
-      sprites[i]=new sprite('objek/obj_'+i+'.jpg',i*115,330); 
+      sprites[i]=new sprite('objek/obj_'+i+'.jpg',i*165,330); 
       targets[i]=new sprite('target2/target_'+i+'.jpg',i*115,40);      
       dragable(sprites[i],targets[i]);
    }
 
    for(var i=4; i<7; i++)
    {
-      sprites[i]=new sprite('objek/obj_'+i+'.jpg',(i-3)*115,430); 
+      sprites[i]=new sprite('objek/obj_'+i+'.jpg',(i-3)*215,470); 
       targets[i]=new sprite('target2/target_'+i+'.jpg',(i-3)*115,180);      
       dragable(sprites[i],targets[i]);
    }   
@@ -35,7 +35,7 @@ var myApp = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 900;
-        this.canvas.height = 550;
+        this.canvas.height = 650;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);  
         this.interval = setInterval(appLoop, 20);
