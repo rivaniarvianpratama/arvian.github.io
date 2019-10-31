@@ -1,10 +1,10 @@
 const video = document.getElementById('video')
 
 Promise.all ([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/mulon/mulon/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/mulon/mulon/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/mulon/mulon/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/mulon/mulon/models'),
+  faceapi.nets.tinyFaceDetector.loadFromUri('/mulon/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/mulon/models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('/mulon/models'),
+  faceapi.nets.faceExpressionNet.loadFromUri('/mulon/models'),
 ]).then(startVideo)
 
 function startVideo() {
